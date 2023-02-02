@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "r l";
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+}
+img{
+    width: 200px;
+    align-items: center;
+}
+
+.logo{
+    display: grid;
+    grid-area: r;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main{
+    display: grid;
+    grid-area: l;
+    align-self: center;
+    justify-items: center;
+}
+
+main > p {
+    margin: 5px 0px;
+}
+
+.botao {
+    display: flex;
+}
+
+span {
+    color: green;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}

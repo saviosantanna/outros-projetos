@@ -1,0 +1,194 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    width: 98vw;
+    margin: 5px;
+}
+
+header {
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.733) 20%,rgba(255, 255, 255, 0)), url(background-netflix.jpg);
+    background-size: cover;
+    padding: 5px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    gap: 10px;
+    grid-template-areas: "n"
+                         "m";
+}
+
+nav {
+    grid-area: n;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "l"
+                         "b";
+    justify-content: space-between;
+}
+
+.logo{
+    margin: 5px;
+    justify-self: left;
+    align-self: center;
+    width: 200px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.botoes{
+    background-color: red;
+    margin: 5px;
+    justify-self: right;
+    align-self: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 18px;
+    padding: 9px;
+    border-radius: 10px;
+    margin-right: 100px;
+    cursor: pointer;
+
+}
+
+main {
+    grid-area: m;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+main > p {
+    padding: 5px;
+}
+
+main > input {
+    border: none;
+}
+
+.vamosla{
+    background-color: #f40612;
+    color: white;
+    padding: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.cx-txt {
+    padding: 10px;
+    width: 250px;
+    margin-top: 5px;
+}
+
+section {
+    background-color: gray;
+    display: grid;
+    gap: 5px;
+    padding: 5px 0px;
+}
+
+.sec1 {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "t i";
+    padding: 15px;
+}
+
+.sec1 > span {
+    justify-self: center;
+    align-self: center;
+    grid-area: i;
+    text-align: justify;
+    color: white;
+
+}
+
+.sec1 > img {
+    justify-self: center;
+    align-self: center;
+    grid-area: t;
+}
+
+.sec2 {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "t i";
+    padding: 15px;
+}
+
+.sec2 > span {
+    justify-self: center;
+    align-self: center;
+    grid-area: t;
+    text-align: justify;
+    color: white;
+
+}
+
+.sec2 > img {
+    justify-self: center;
+    align-self: center;
+    grid-area: i;
+}
+
+.img-sec {
+    width: 300px;
+}
+
+.faq{
+    background-color: black;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    padding: 15px;
+    color: white;
+}
+
+.faq > p {
+    background-color: gray;
+    width: 400px;
+    height: 30px;
+    margin-top: 3px;
+    display: grid;
+    align-items: center;
+}
+
+.faq > p:hover {
+    cursor: pointer;
+    background-color: rgb(110, 110, 110);
+}
+
+footer {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "r r"
+    "r r"
+    "r r"
+    "r r";
+    color: white;
+    border-top: 5px solid gray;
+}
+
+footer >p {
+    justify-self: center;
+    align-self: center;
+    margin: 5px;
+}
+
+footer >p:hover{
+    color: rgb(87, 87, 87);
+    cursor: pointer;
+}
