@@ -49,7 +49,7 @@ input{
     
 }
 
-#resultadoo > div:hover {
+#resultado > div:hover {
     box-shadow: black 3px 3px 1px;
     cursor: pointer;
     transition: 0.5s;
