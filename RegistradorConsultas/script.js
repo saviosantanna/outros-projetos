@@ -21,17 +21,17 @@ nomeForm.addEventListener("submit", function (e) {
 
     frase = { texto, horario }
 
-    atualizarDados(frase, true);
+    atualizarDados(frase);
 })
 
-function atualizarDados(frase, add) {
-    if (add) {
+function atualizarDados(frase) {
+    
         var res = window.document.getElementById('resultado')
         res.innerHTML += `<div class="consulta">
     <span>${frase.texto} - realizada às ${frase.horario}</span>
     <ion-icon name="trash-bin-outline" class="lixeira"></ion-icon>
 </div>`
-    }
+    
 
     var excluir = window.document.getElementsByClassName('consulta')
     var lixo = window.document.getElementsByClassName('lixeira')
