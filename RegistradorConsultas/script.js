@@ -34,20 +34,20 @@ function atualizarDados(frase, add) {
     }
 
     var excluir = window.document.getElementsByClassName('consulta')
-    var excluirForm = window.document.querySelectorAll('.lixeira')
-    for (let i = 0; i < excluirForm.length; i++) {
-        excluir[i].addEventListener("click", function (r) {
-          
-            console.log(excluir)
-            console.log(excluir[i])
-            /*
-            console.log(excluir.length);
-            */excluir[i].remove();
-            /*console.log(excluir);
-            console.log(excluir[i])*/
-        
+    var lixo = window.document.getElementsByClassName('lixeira')
+
+    for (let i = 0; i < lixo.length; i++) {
+        lixo[i].addEventListener("click", function (teste) {
+
+            //teste.target.style.color = "green";
+            console.log(teste.target)
+
+            excluir[i].remove();
+            console.log(lixo.length)
+            teste.target.removeEventListener()
+
         })
-        
+
     }
 
 }
