@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-body{
+body {
     background-color: #0C3043;
     width: 100vw;
     height: 100vh;
@@ -14,7 +14,7 @@ body{
     margin: 5px;
 }
 
-input{
+input {
     background-color: #99D9EA;
     padding: 30px;
     width: 400px;
@@ -27,13 +27,14 @@ input{
     border-radius: 5px;
     width: 200px;
     padding: 30px;
-    font-size: 1.2em;;
+    font-size: 1.2em;
+    ;
     border: #00A2E8 solid 4px;
     color: #00A2E8;
     font-weight: bold;
 }
 
-.button:hover{
+.button:hover {
     border: black solid 4px;
     color: black;
     background-color: #00A2E8;
@@ -41,41 +42,53 @@ input{
 }
 
 
-#resultado > div {
+#resultado>div {
     background-color: #124865;
     color: #06a2e8;
     padding: 25px;
     margin-bottom: 12px;
-    
+
 }
 
-#resultado > div:hover {
+#resultado>div:hover {
     box-shadow: black 3px 3px 1px;
     cursor: pointer;
     transition: 0.5s;
     transform: scale(1.1);
-    
+
 }
 
-.historico > h1 {
+.historico>h1 {
     color: white;
     margin: 20px 0;
 }
 
-.consulta{
+.consulta {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-ion-icon{
+ion-icon {
     color: white;
     font-weight: bolder;
     transform: scale(1.5);
     padding: 5px;
 }
 
-ion-icon:hover{
+ion-icon:hover {
     color: red;
     cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    *{
+        transform: scale(0.98);
+    }
+}
+
+@media (max-width: 450px) {
+    *{
+        transform: scale(0.95);
+    }
 }

@@ -1,4 +1,4 @@
-var frase = []
+var consultas = []
 
 
 
@@ -19,19 +19,48 @@ nomeForm.addEventListener("submit", function (e) {
 
     e.target[0].value = "";
 
-    frase = { texto, horario }
+    consulta = { texto, horario }
+    consultas = [...consultas, consulta]
 
-    atualizarDados(frase);
+    atualizarDados(consulta);
 })
 
-function atualizarDados(frase) {
-    
-        var res = window.document.getElementById('resultado')
+function atualizarDados(consulta) {
+
+    var res = window.document.getElementById('resultado')
+
+    res.innerHTML = "";
+
+    for (i = 0; i < consultas.length; i++) {
         res.innerHTML += `<div class="consulta">
-    <span>${frase.texto} - realizada às ${frase.horario}</span>
+    <span>${consultas[i].texto} - realizada às ${consultas[i].horario}</span>
     <ion-icon name="trash-bin-outline" class="lixeira"></ion-icon>
 </div>`
-    
+    }
+
+    console.log(consultas)
+
+    var lixo = window.document.getElementsByClassName('lixeira')
+    for (let i = 0; i < consultas.length; i++) {
+        lixo[i].addEventListener("click", function (teste) {
+            teste.target.style.color = 'yellow'
+            console.log(i);
+            removerDado(i);
+        })
+    }
+}
+
+function removerDado(i){
+    console.log("remover indice "+i)
+    consultas.splice(i,1);
+    atualizarDados();
+    console.log(consultas);
+}
+
+
+
+/*
+
 
     var excluir = window.document.getElementsByClassName('consulta')
     var lixo = window.document.getElementsByClassName('lixeira')
@@ -50,9 +79,4 @@ function atualizarDados(frase) {
 
     }
 
-}
-
-
-
-
-
+*/
