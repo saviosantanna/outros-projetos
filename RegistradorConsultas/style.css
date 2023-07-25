@@ -9,6 +9,10 @@
     flex-direction: column;
     align-items: end;
     justify-content: end;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100vh;
 }
 
 body {
@@ -20,10 +24,18 @@ body {
     justify-content: center;
     align-items: center;
     margin: 10vh 0px 0 0;
+    margin-bottom: 45px;
 }
 
 .conteudo{
-    width: 50%;
+    width: 70%;
+}
+
+#formulario{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 input {
@@ -139,6 +151,7 @@ footer {
     border-top: #00A2E8 solid 3px;
     position: fixed;
     display: flex;
+    align-items: end;
     bottom: 0;
     width: 100vw;
     height: 45px;
@@ -147,7 +160,6 @@ footer {
     font-size: 25px;
     color: white;
     background-color: #0C3043;
-    padding: 0;
 }
 
 .logos{
@@ -175,10 +187,34 @@ footer {
     *{
         transform: scale(0.98);
     }
+
+    body{
+        margin-bottom: -10px;
+    }
+
+    footer > p{
+        font-size: 25px;
+    }
+
+    .icones{
+        font-size: 30px;
+    }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     *{
         transform: scale(0.95);
+    }
+
+    body{
+        margin-bottom: -50px;
+    }
+
+    footer > p{
+        font-size: 20px;
+    }
+
+    .icones{
+        font-size: 25px;
     }
 }
